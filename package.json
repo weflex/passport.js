@@ -1,0 +1,29 @@
+{
+  "name": "@weflex/passport.js",
+  "version": "1.0.0",
+  "description": "passport utility for weflex",
+  "main": "passport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weflex/passport.js.git"
+  },
+  "keywords": [
+    "passport",
+    "browser"
+  ],
+  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weflex/passport.js/issues"
+  },
+  "homepage": "https://github.com/weflex/passport.js#readme",
+  "devDependencies": {
+    "babel-core": "6.3.26",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-stage-1": "6.3.13",
+    "webpack": "1.12.9"
+  }
+}

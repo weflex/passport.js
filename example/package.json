@@ -1,0 +1,15 @@
+{
+  "name": "passport-example",
+  "version": "1.0.0",
+  "description": "example for passport",
+  "main": "index.js",
+  "scripts": {
+    "example": "node_modules/.bin/webpack-dev-server --inline --devtool inline-source-map --progress --colors"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "webpack-dev-server": "1.14.0"
+  }
+}
