@@ -36,15 +36,17 @@ class WeChatProvider extends BaseProvider {
       config.state = (Math.random() * 100) + '';
     }
   }
-  requestForCode() {
-    const url = 'https://open.weixin.qq.com/connect/oauth2/authorize?' +
+  getUrlForCode() {
+    return 'https://open.weixin.qq.com/connect/oauth2/authorize?' +
       `appid=${this.config.appid}&` +
       `redirect_uri=${this.config.redirectUri}&` +
       `response_type=code&` +
       `scope=${this.config.scope}&` +
       `state=${this.config.state }` +
       '#wechat_redirect';
-    location.href = url;
+  }
+  requestForCode() {
+    location.href = this.getUrlForCode();
   }
   async requestForAccessToken(code) {
     const url = 'https://api.weixin.qq.com/sns/oauth2/access_token?' + 
@@ -85,6 +87,9 @@ class Passport {
       refreshToken: null,
       profile: null
     };
+  }
+  getAuthUrl(name) {
+    return this.providers[name] && this.providers[name].requestForCode();
   }
   async auth(name) {
     const provider = this.providers[name];

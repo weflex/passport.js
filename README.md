@@ -22,7 +22,13 @@ const wechat = new WeChatProvider({
   redirectUri: location.href
 });
 
+// get url for requesting code
+const url = wechat.getUrlForCode();
+// here you can pass url or set in `location.href`
+
 const passport = new Passport({ wechat });
+
+// directly goto url
 await passport.auth('wechat');
 
 // print payload
