@@ -36,13 +36,13 @@ class WeChatProvider extends BaseProvider {
       config.state = (Math.random() * 100) + '';
     }
   }
-  getUrlForCode() {
+  getUrlForCode(state) {
     return 'https://open.weixin.qq.com/connect/oauth2/authorize?' +
       `appid=${this.config.appid}&` +
       `redirect_uri=${this.config.redirectUri}&` +
       `response_type=code&` +
       `scope=${this.config.scope}&` +
-      `state=${this.config.state }` +
+      `state=${state || this.config.state}` +
       '#wechat_redirect';
   }
   requestForCode() {

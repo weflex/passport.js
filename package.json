@@ -1,11 +1,12 @@
 {
   "name": "@weflex/passport.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "passport utility for weflex",
   "main": "dist/passport.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack -p"
+    "build": "./node_modules/.bin/webpack -p",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
